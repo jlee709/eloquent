@@ -47,24 +47,38 @@ for(i=0; i<=100; i++){
 // Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. 
 // At each position of the grid there is either a space or a “#” character. The characters should form a chess board.
 
+//  outer loop handles the lines and the inner loop handles the characters on a line. //
+
 function genChessBoard(){
-	space = '';
-	checker = '#';
-	
 	for(i=1;i<=8;i++){
-		if(i%2===0){
-			space = space;
+
+	marker = '';	
+		if(i%2 === 0){
+			marker = '#';
 		}else{
-			space = checker;
-		} for(j=1; j<=7; j++){
-			if([j-1] % 2 === 0){
-				space = space;
+			marker = ' ';
+		}
+
+	for(j=1; j<=7; j++){
+			if(marker[j-1] === "#"){
+				marker = marker + ' '
 			}else{
-				space = checker;
+				marker = marker + '#'
 			}
 		}
-	} console.log(space);
-}			
-		
+		console.log(marker);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
